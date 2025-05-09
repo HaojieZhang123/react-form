@@ -30,3 +30,29 @@ li {
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
+
+/* form and inputs */
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 80%;
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  margin-right: 20px;
+}
+
+button {
+  width: 20%;
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
