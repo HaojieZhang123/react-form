@@ -22,6 +22,11 @@ function App() {
           <li key={index}>{article}</li>
         ))}
       </ul>
+
+      <form>
+        <input type="text" />
+        <button>Aggiungi</button>
+      </form>
     </>
   )
 }
