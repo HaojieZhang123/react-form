@@ -23,13 +23,22 @@ function App() {
     setNewArticle('')
   }
 
+  const deleteArticle = (index) => {
+    const updatedArticles = [...articles]
+    updatedArticles.splice(index, 1)
+    setArticles(updatedArticles)
+  }
+
   return (
     <>
       <div className="container">
         <h1>Blog List</h1>
         <ul>
           {articles.map((element, index) => (
-            <li key={index}>{element}</li>
+            <li key={index}>
+              {element}
+              <button onClick={() => deleteArticle(index)}>Cancella</button>
+            </li>
           ))}
         </ul>
 

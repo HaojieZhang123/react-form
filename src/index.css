@@ -29,6 +29,9 @@ li {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* form and inputs */
@@ -38,7 +41,7 @@ form {
   justify-content: center;
 }
 
-input {
+form input {
   width: 80%;
   font-size: 20px;
   padding: 20px;
@@ -48,7 +51,7 @@ input {
   margin-right: 20px;
 }
 
-button {
+form button {
   width: 20%;
   font-size: 20px;
   padding: 20px;
