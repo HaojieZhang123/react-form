@@ -25,17 +25,19 @@ function App() {
 
   return (
     <>
-      <h1>Blog</h1>
-      <ul>
-        {articles.map((element, index) => (
-          <li key={index}>{element}</li>
-        ))}
-      </ul>
+      <div className="container">
+        <h1>Blog List</h1>
+        <ul>
+          {articles.map((element, index) => (
+            <li key={index}>{element}</li>
+          ))}
+        </ul>
 
-      <form onSubmit={createArticle}>
-        <input type="text" value={newArticle} onChange={(e) => setNewArticle(e.target.value)} />
-        <button>Aggiungi</button>
-      </form>
+        <form onSubmit={createArticle}>
+          <input type="text" value={newArticle} onChange={(e) => setNewArticle(e.target.value)} />
+          <button>Aggiungi</button>
+        </form>
+      </div>
     </>
   )
 }
