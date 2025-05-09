@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const articles = [
+const articlesArray = [
   'Articolo 1',
   'Articolo 2',
   'Articolo 3',
@@ -14,17 +14,26 @@ const articles = [
 ]
 function App() {
 
+  const [articles, setArticles] = useState(articlesArray)
+  const [newArticle, setNewArticle] = useState('')
+
+  const createArticle = (e) => {
+    e.preventDefault()
+    setArticles([...articles, newArticle])
+    setNewArticle('')
+  }
+
   return (
     <>
       <h1>Blog</h1>
       <ul>
-        {articles.map((article, index) => (
-          <li key={index}>{article}</li>
+        {articles.map((element, index) => (
+          <li key={index}>{element}</li>
         ))}
       </ul>
 
-      <form>
-        <input type="text" />
+      <form onSubmit={createArticle}>
+        <input type="text" value={newArticle} onChange={(e) => setNewArticle(e.target.value)} />
         <button>Aggiungi</button>
       </form>
     </>
